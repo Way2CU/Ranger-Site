@@ -1,3 +1,4 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/video": "video.xml"
 }

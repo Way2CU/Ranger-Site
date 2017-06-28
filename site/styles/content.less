@@ -1,0 +1,324 @@
+/**
+ * Content Style Sheet
+ * Ranger LP
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+header {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	background-image: url(../images/header.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	min-height: 800px;
+	position: relative;
+	text-align: center;
+
+	article {
+		text-align: center;
+		h1 {
+			margin: 0;
+			font-size: 3em;
+			padding-bottom: 0.5em;
+		}
+
+		p {
+			margin: 0;
+			font-size: 2em;
+			font-weight: 700;
+			padding-top: 0.5em;
+		}
+	}
+
+	div.ribbon {
+		width: 25%;
+		display: block;
+		margin: 0em auto;
+
+		svg {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	a.phone {
+		.wine_button();
+		margin: 1em auto;
+	}
+
+	a.youtube {
+		display: inline-block;
+		text-align: center;
+		transition: all 0.3s;
+
+		&:hover {
+			svg {
+				transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+				transition-duration: 0.5s;
+				transform: scale(1.2);
+			}
+
+		}
+		svg {
+			transform: scale(1);
+			width: 100px;
+			height: 100px;
+			border: 2px solid transparent;
+			border-radius: 100%;
+		}
+	}
+}
+
+header div.form_container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: fade(@color_text, 50%);
+	text-align: center;
+	box-sizing: border-box;
+	padding: 1em 0;
+
+	h3 {
+		color: white;
+		font-weight: 400;
+		margin: 0;
+		padding-bottom: 0.5em;
+	}
+}
+
+header div.form_container form {
+	width: 1200px;
+	margin: 0 auto;
+	color: white;
+}
+
+header div.form_container form div.controls,
+header div.form_container form label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	box-sizing: border-box;
+}
+
+header div.form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 0.7em 1em;
+	width: 80%;
+	border: 1px solid grey;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @color_wine;
+	}
+
+}
+
+header div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 15%;
+	padding: 0 2.5%;
+}
+
+header div.form_container form div.controls button {
+	height: 45px;
+	float: right;
+	margin-right: 1em;
+	padding: 0 3em;
+	border: 1px solid @color_text;
+	background-color: @color_wine;
+	color: white;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: lighten(@color_wine, 10%);
+	}
+}
+
+//Dialog video
+div.dialog.video.visible.active {
+	top: 100px;
+	max-width: initial;
+}
+
+div.dialog.video div.inner_content iframe {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/**
+ * Section showacse
+ */
+
+section.showacse {
+	padding: 0 calc(~'(100% - 1100px)' / 2);
+	background-image: url(../images/cooking_plate.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	min-height: 1280px;
+	padding-top: 120px;
+
+	div.logo {
+		width: 40%;
+		height: 100px;
+		display: inline-block;
+		vertical-align: top;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	article {
+		color: white;
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		box-sizing: border-box;
+		padding: 0 100px;
+
+		p {
+			font-size: 1.5em;
+		}
+	}
+}
+
+section.showacse div.ranger,
+section.showacse div.steak {
+	margin-top: 100px;
+	height: 400px;
+	box-sizing: border-box;
+	padding-right: 50%;
+	padding-left: 2em;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	background-color: fade(@color_wine, 70%);
+	position: relative;
+
+	div.steak_image {
+		position: absolute;
+		top: -4.5rem;
+		right: 0;
+		bottom: -4.5rem;
+
+		height: 540px;
+		width: 540px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+section.showacse div.ranger li,
+section.showacse div.steak li {
+	list-style: none;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 2em;
+	padding-right: 50px;
+
+	&:nth-of-type(2){
+		padding: 50px 2em;
+		padding-right: 50px;
+	}
+
+	h4 {
+		display: inline-block;
+		vertical-align: middle;
+		color: @color_background;
+		font-weight: 400;
+		width: 70%;
+		padding-right: 60px;
+		margin: 0;
+	}
+
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		width: 50px;
+		height: 50px;
+		fill: @color_background;
+	}
+}
+
+section.showacse div.ranger {
+		margin-top: 200px;
+		background-color: fade(@color_olive, 70%);
+		padding-right: 0;
+		padding-left: 50%;
+		padding-top: 4em;
+		padding-bottom: 4em;
+
+
+		div.ranger_image {
+			position: absolute;
+			top: -4.5rem;
+			left: 0;
+			bottom: -4.5rem;
+
+			height: 540px;
+			width: 540px;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+	}
+}
+
+section.showacse div.ranger li:nth-of-type(2) {
+	padding: 50px 2em;
+	padding-right: 50px;
+}
+
+
+/**
+ * Section specsf
+ */
+section.specs {
+	background-color: @color_text;
+	color: white;
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+}
+
+section.specs ol {
+	width: 50%;
+	margin: 0 auto;
+	padding: 2em 0;
+	column-count: 3;
+}
+
+section.specs li {
+	display: block;
+	margin: 0;
+	counter-increment: li;
+	margin-bottom: 1em;
+
+	&:before {
+		content: counter(li);
+		margin-left: 0.5em;
+	}
+}
+
+section.specs div.spec_image {
+	display: block;
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}

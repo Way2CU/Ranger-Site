@@ -16,3 +16,35 @@
 @paragraph_spacing: 1rem;
 @button_padding: 0.5rem 1rem;
 @input_padding: 0.5rem;
+
+
+.wine_button(){
+	background-color: @color_wine;
+	color: @color_background;
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	text-decoration:  none;
+	font-weight: 700;
+	font-size: 2em;
+	padding: 0.5em;
+	border-radius: 15px;
+	border: 2px solid @color_background;
+	text-align: center;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 13px 10px -7px rgba(0, 0, 0, 0.5);
+	}
+
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		fill: @color_background;
+		width: 35px;
+		height: 35px;
+		padding-right: 0.5em;
+		margin-bottom: 0.1em;
+	}
+}

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
@@ -9,7 +8,134 @@
 		</head>
 
 		<body>
-			<h1>תפסיק לנפנף ותמצא לך תחביב אחר</h1>
+			<cms:svg file="site_sprite.svg"/>
+			<header>
+				<cms:module
+					name="articles"
+					action="show"
+					group="header_articles"
+					text_id="header_article"
+					template="parts/article_template.xml"
+					/>
+
+					<!-- Ribbon -->
+					<div class="ribbon">
+						<cms:svg file="sale.svg"/>
+					</div>
+
+					<!-- Phone Link -->
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone" />
+						<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
+					</a>
+
+					<!-- YouTube link -->
+					<a href="URL::make(array(), 'video.xml')"
+						cms:eval="href"
+						class="youtube"
+						>
+						<cms:svg file="youtube.svg"/>
+					</a>
+
+					<!-- Form -->
+					<div class="form_container">
+						<h3><cms:text constant="leave_details"/></h3>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
+					</div>
+			</header>
+
+			<!-- Section showacse -->
+			<section class="showacse">
+				<!-- Article price -->
+				<cms:module
+					name="articles"
+					action="show"
+					group="show_case"
+					text_id="price_article"
+					template="stock/article_generic.xml"
+					/>
+
+				<!-- BG logo -->
+				<div class="logo">
+					<cms:svg file="ranger.svg"/>
+				</div>
+
+				<!-- Steak features -->
+				<div class="steak">
+					<div class="steak_image">
+						<img
+							src="_BASEURL.'/site/images/steak.jpg'"
+							alt="cooked_steak"
+							cms:eval="src"
+							/>
+					</div>
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="steak_features"
+					template="stock/features_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="sprite" value="site_sprite.svg"/>
+				</cms:module>
+				</div>
+
+				<!-- Ranger Features -->
+				<div class="ranger">
+				<!-- Feature article list -->
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="ranger_features"
+					template="stock/features_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="sprite" value="site_sprite.svg"/>
+				</cms:module>
+
+				<!-- Image  -->
+					<div class="ranger_image">
+						<img
+							src="_BASEURL.'/site/images/ranger.jpg'"
+							alt="ranger_blowing_bbq"
+							cms:eval="src"
+							/>
+					</div>
+				</div>
+			</section>
+			<section class="specs">
+				<cms:module
+					name="articles"
+					action="show"
+					group="specs"
+					text_id="specs_articles"
+					template="stock/article_generic.xml"
+					/>
+
+					<div class="spec_image">
+						<img
+							src="_BASEURL.'/site/images/tech_specs.jpg'"
+							alt="blueprint_of_ranger"
+							cms:eval="src"
+							/>
+					</div>
+			</section>
+			<section class="video">
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="home_page_video"
+					template="parts/video_template.xml"
+					/>
+			</section>
 		</body>
 	</html>
 </document>
