@@ -6,4 +6,309 @@
  * Authors: Iliya Melishev
  */
 
+footer,
+header {
+	background-color: @color_blue;
+	background-image: url(../images/mobile_header.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	text-align: center;
+	min-height: 700px;
 
+	article {
+		padding-top: 50px;
+		color: @color_background;
+		text-align: center;
+		h1 {
+			margin: 0;
+			padding-bottom: 0.5em;
+		}
+
+		p {
+			margin: 0;
+			font-weight: 700;
+			padding-top: 0.5em;
+		}
+	}
+
+}
+
+footer div.ribbon,
+header div.ribbon {
+	width: 80%;
+	display: block;
+	margin: 0em auto;
+
+	svg {
+		display: block;
+		width: 100%;
+		fill: @color_background;
+	}
+
+}
+
+footer a.phone,
+header a.phone {
+	.wine_button();
+	margin: 1em auto;
+	width: 50%;
+	font-size: 1em;
+}
+
+footer a.youtube,
+header a.youtube {
+	display: inline-block;
+	text-align: center;
+	svg {
+		transform: scale(1);
+		width: 80px;
+		height: 80px;
+		border: 2px solid transparent;
+		border-radius: 100%;
+	}
+}
+
+div.form_container {
+	display: block;
+	width: 100%;
+	background-color: black;
+	box-sizing: border-box;
+	padding: 1em;
+
+	h3 {
+		color: white;
+		font-weight: 400;
+		margin: 0;
+		padding-bottom: 0.5em;
+	}
+}
+
+div.form_container form {
+	margin: 0 auto;
+	color: white;
+}
+
+div.form_container form div.controls,
+div.form_container form label {
+	display: block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+div.form_container form label input {
+	display: block;
+	box-sizing: border-box;
+	padding: 0.7em 1em;
+	width: 100%;
+	border: 1px solid grey;
+	margin-bottom: 1em;
+
+	&:focus {
+		border: 1px solid @color_wine;
+	}
+
+}
+
+div.form_container form label span {
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+
+div.form_container form div.controls button {
+	height: 45px;
+	padding: 0 3em;
+	border: 1px solid @color_text;
+	background-color: @color_wine;
+	color: white;
+}
+
+
+//Dialog video
+div.dialog.video.visible.active {
+	width: 90vw;
+}
+
+div.dialog.video.visible.active div.inner_content {
+	width: 100%;
+}
+
+div.dialog.video div.inner_content iframe {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+/**
+ * Section showacse
+ */
+ section.showacse {
+ 	padding-top: 35px;
+ 	background-image: url(../images/mobile_cooking_plate.jpg);
+ 	background-position: center top;
+ 	background-size: 100% auto;
+ 	background-repeat: no-repeat;
+
+ 	div.logo {
+ 		height: 60px;
+ 		display: block;
+ 		padding: 0 1em;
+ 		padding-bottom: 20px;
+
+ 		svg {
+ 			display: block;
+ 			width: 100%;
+ 			height: auto;
+ 		}
+ 	}
+
+ 	article {
+ 		color: white;
+ 		display: block;
+ 		box-sizing: border-box;
+ 		width: 100%;
+ 		text-align: center;
+ 		padding-bottom: 30px;
+
+ 		p {
+ 			font-size: 1.2em;
+ 		}
+ 	}
+ }
+
+ section.showacse div.ranger,
+ section.showacse div.steak {
+ 	display: block;
+ 	height: 800px;
+ 	box-sizing: border-box;
+ 	padding: 1em;
+ 	background-color: @color_wine;
+ 	position: relative;
+
+ 	div.steak_image {
+ 		position: absolute;
+ 		bottom: 0;
+ 		left: 0;
+ 		right: 0;
+
+ 		img {
+ 			display: block;
+ 			width: 100%;
+ 		}
+ 	}
+ }
+
+ section.showacse div.ranger li,
+ section.showacse div.steak li {
+ 	list-style: none;
+ 	display: block;
+ 	width: 100%;
+ 	box-sizing: border-box;
+
+ 	&:nth-of-type(2) {
+ 		padding: 50px 0;
+ 	}
+
+ 	h4 {
+ 		display: inline-block;
+ 		vertical-align: middle;
+ 		color: @color_background;
+ 		font-weight: 400;
+ 		width: 80%;
+ 		margin: 0;
+ 	}
+
+ 	svg {
+ 		display: inline-block;
+ 		vertical-align: middle;
+ 		width: 35px;
+ 		height: 35px;
+ 		padding-left: 1em;
+ 		fill: @color_background;
+ 	}
+ }
+
+ section.showacse div.ranger {
+		background-color: @color_olive;
+
+	div.ranger_image {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+ }
+
+/**
+ * Section specsf
+ */
+ section.specs {
+	background-color: black;
+	color: white;
+	padding: 1em;
+}
+
+section.specs ol {
+	margin: 0 auto;
+}
+
+section.specs li {
+	display: block;
+	margin: 0;
+	counter-increment: li;
+	margin-bottom: 1em;
+
+	&:before {
+		content: counter(li);
+		margin-left: 0.5em;
+	}
+}
+
+section.specs div.spec_image {
+	display: block;
+	width: 90vw;
+	height: auto;
+	margin: 0 auto;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+section.video {
+	padding: 1em ;
+	background-color: black;
+	text-align: center;
+
+	iframe {
+		width: 90vw;
+		height: 200px;
+	}
+}
+
+
+//Footer
+footer {
+	background-color: black;
+	background-image: url(../images/mobile_footer.jpg);
+
+	a.youtube {
+		padding-top: 50px;
+	}
+}
+
+div.copyright.light {
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 100px') center;
+}

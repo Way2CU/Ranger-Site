@@ -50,7 +50,6 @@ handle_dialog_video = function(event) {
 	Site.dialog_video
 		.set_title(this.getAttribute('title'))
 		.set_content_from_url(this.getAttribute('href'))
-		.set_size('600px', '400px')
 		.addClass('video')
 		.open_when_ready();
 }

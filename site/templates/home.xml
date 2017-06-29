@@ -41,32 +41,61 @@
 						<cms:svg file="youtube.svg"/>
 					</a>
 
-					<!-- Form -->
-					<div class="form_container">
-						<h3><cms:text constant="leave_details"/></h3>
-						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="contact_form"
-							/>
-					</div>
+					<cms:desktop>
+						<!-- Form -->
+						<div class="form_container">
+							<h3><cms:text constant="leave_details"/></h3>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+								/>
+						</div>
+					</cms:desktop>
 			</header>
-
+			<cms:mobile>
+				<!-- Form -->
+				<div class="form_container">
+					<h3><cms:text constant="leave_details"/></h3>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:mobile>
 			<!-- Section showacse -->
 			<section class="showacse">
-				<!-- Article price -->
-				<cms:module
-					name="articles"
-					action="show"
-					group="show_case"
-					text_id="price_article"
-					template="stock/article_generic.xml"
-					/>
+				<cms:desktop>
+					<!-- Article price -->
+					<cms:module
+						name="articles"
+						action="show"
+						group="show_case"
+						text_id="price_article"
+						template="stock/article_generic.xml"
+						/>
 
-				<!-- BG logo -->
-				<div class="logo">
-					<cms:svg file="ranger.svg"/>
-				</div>
+					<!-- BG logo -->
+					<div class="logo">
+						<cms:svg file="ranger.svg"/>
+					</div>
+				</cms:desktop>
+				<cms:mobile>
+					<!-- BG logo -->
+					<div class="logo">
+						<cms:svg file="ranger.svg"/>
+					</div>
+
+					<!-- Article price -->
+					<cms:module
+						name="articles"
+						action="show"
+						group="show_case"
+						text_id="price_article"
+						template="stock/article_generic.xml"
+						/>
+				</cms:mobile>
 
 				<!-- Steak features -->
 				<div class="steak">
@@ -159,16 +188,38 @@
 						<cms:text constant="phone" />
 						<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
 					</a>
-					<!-- Form -->
-					<div class="form_container">
-						<h3><cms:text constant="leave_details"/></h3>
-						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="contact_form"
-							/>
-					</div>
+					<cms:mobile>
+						<!-- YouTube link -->
+						<a href="URL::make(array(), 'video.xml')"
+							cms:eval="href"
+							class="youtube"
+							>
+							<cms:svg file="youtube.svg"/>
+						</a>
+					</cms:mobile>
+					<cms:desktop>
+						<!-- Form -->
+						<div class="form_container">
+							<h3><cms:text constant="leave_details"/></h3>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+								/>
+						</div>
+					</cms:desktop>
 			</footer>
+			<cms:mobile>
+				<!-- Form -->
+				<div class="form_container">
+					<h3><cms:text constant="leave_details"/></h3>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:mobile>
 			<!-- Copyright -->
 			<cms:template file="stock/copyright.xml">
 				<param name="holder" value="copyright_holder"/>
