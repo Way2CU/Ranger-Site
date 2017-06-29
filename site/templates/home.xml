@@ -188,15 +188,6 @@
 						<cms:text constant="phone" />
 						<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
 					</a>
-					<cms:mobile>
-						<!-- YouTube link -->
-						<a href="URL::make(array(), 'video.xml')"
-							cms:eval="href"
-							class="youtube"
-							>
-							<cms:svg file="youtube.svg"/>
-						</a>
-					</cms:mobile>
 					<cms:desktop>
 						<!-- Form -->
 						<div class="form_container">
