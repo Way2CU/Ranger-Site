@@ -4,7 +4,7 @@ All of these need to be checked manually, changed and then committed. System wil
 
 - Optimization:
 	>- [x] PNG images are optimized using `optipng` command;
-	- [ ] JPEG images are converted from original PNG and optimized using `guetzli` command;
+	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [x] SVG images are cleaned and optimized;
 	- [ ] Make sure site scores 95+ on Page Speed Insights (ideally 100);
 - Site specific items:
