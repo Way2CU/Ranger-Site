@@ -1,5 +1,7 @@
 {
     "site_title": "Ranger",
     "phone": "09-7654321",
-    "leave_details": "רוצים שנחזור אליכם? מלאו את הטופס"
+    "leave_details": "רוצים שנחזור אליכם? מלאו את הטופס",
+    "copyright_holder": "Copyright &copy; 2017. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
+    "copyright_text": "All rights reserved."
 }

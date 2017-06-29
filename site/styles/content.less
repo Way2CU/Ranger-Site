@@ -6,6 +6,7 @@
  * Authors: Iliya Melishev
  */
 
+footer,
 header {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	background-image: url(../images/header.jpg);
@@ -39,6 +40,7 @@ header {
 		svg {
 			display: block;
 			width: 100%;
+			fill: @color_text;
 		}
 	}
 
@@ -70,6 +72,7 @@ header {
 	}
 }
 
+footer div.form_container,
 header div.form_container {
 	position: absolute;
 	bottom: 0;
@@ -89,12 +92,15 @@ header div.form_container {
 	}
 }
 
+footer div.form_container form,
 header div.form_container form {
 	width: 1200px;
 	margin: 0 auto;
 	color: white;
 }
 
+footer div.form_container form div.controls,
+footer div.form_container form label,
 header div.form_container form div.controls,
 header div.form_container form label {
 	display: inline-block;
@@ -103,6 +109,7 @@ header div.form_container form label {
 	box-sizing: border-box;
 }
 
+footer div.form_container form label input,
 header div.form_container form label input {
 	display: inline-block;
 	vertical-align: middle;
@@ -119,6 +126,7 @@ header div.form_container form label input {
 
 }
 
+footer div.form_container form label span,
 header div.form_container form label span {
 	display: inline-block;
 	vertical-align: middle;
@@ -126,6 +134,7 @@ header div.form_container form label span {
 	padding: 0 2.5%;
 }
 
+footer div.form_container form div.controls button,
 header div.form_container form div.controls button {
 	height: 45px;
 	float: right;
@@ -320,5 +329,46 @@ section.specs div.spec_image {
 	img {
 		display: block;
 		width: 100%;
+	}
+}
+
+section.video {
+	padding: 1em calc(~'(100% - 1200px)' / 2);
+	background-color: @color_text;
+	text-align: center;
+}
+
+//footer styles connected in header
+
+footer {
+	background-image: url(../images/footer.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+
+	article {
+		color: @color_background;
+	}
+
+	div.ribbon {
+		margin: 2em auto;
+		svg {
+			fill: @color_background;
+		}
+	}
+}
+
+div.copyright {
+	text-align: center;
+	background-color: black;
+	color: white;
+
+	background-position: calc(~'50% - 100px') center
+}
+
+//Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	footer div.form_container form,
+	header div.form_container form {
+		width: auto;
 	}
 }

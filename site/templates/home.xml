@@ -136,6 +136,45 @@
 					template="parts/video_template.xml"
 					/>
 			</section>
+			<footer>
+				<cms:module
+					name="articles"
+					action="show"
+					group="header_articles"
+					text_id="header_article"
+					template="parts/article_template.xml"
+					/>
+
+					<!-- Ribbon -->
+					<div class="ribbon">
+						<cms:svg file="sale.svg"/>
+					</div>
+
+					<!-- Phone Link -->
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone" />
+						<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
+					</a>
+					<!-- Form -->
+					<div class="form_container">
+						<h3><cms:text constant="leave_details"/></h3>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
+					</div>
+			</footer>
+			<!-- Copyright -->
+			<cms:template file="stock/copyright.xml">
+				<param name="holder" value="copyright_holder"/>
+				<param name="text" value="copyright_text"/>
+				<param name="light" value=""/>
+			</cms:template>
 		</body>
 	</html>
 </document>
