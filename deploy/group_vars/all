@@ -1,9 +1,9 @@
 ---
 site:
   domain: berghoff.co.il
-  # subdomain: test
+  subdomain: lp
   # alias: domain.com
-  root: httpdocs
+  root: landing_page
   username: ranger
   caracal_branch: v0.4
   # ip_address: 0.0.0.0
