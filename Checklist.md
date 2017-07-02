@@ -6,13 +6,13 @@ All of these need to be checked manually, changed and then committed. System wil
 	>- [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [x] SVG images are cleaned and optimized;
-	- [ ] Make sure site scores 95+ on Page Speed Insights (ideally 100);
+	- [x] Make sure site scores 95+ on Page Speed Insights (ideally 100);
 - Site specific items:
 	- [x] `system_init.xml` file contains all the modules used;
 	- [x] Deployment script `group_vars/all` file is configured;
-	- [ ] Deployment `hosts.txt` file is configured;
+	- [x] Deployment `hosts.txt` file is configured;
 	- [x] All the languages site is targeting are configured in `config.php`;
-	- [ ] Site title is properly defined;
+	- [x] Site title is properly defined;
 	- [x] No errors or warnings are reported in the log file;
 	>- [x] Templates for registering and recovering user password are created and selected;
 	- [x] Site has favicon specified in different sizes (16, 32, 64);
