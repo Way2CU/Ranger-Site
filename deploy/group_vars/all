@@ -1,6 +1,6 @@
 ---
 site:
-  domain: sample.com
+  domain: berghoff.co.il
   # subdomain: test
   # alias: domain.com
   root: httpdocs
