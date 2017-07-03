@@ -66,6 +66,14 @@ Site.on_load = function() {
 	Site.video_link.addEventListener('click', handle_dialog_video);
 	// New dialog video
 	Site.dialog_video = new Caracal.Dialog();
+
+	// handle analytics event
+	var dataLayer = window.dataLayer || new Array();
+	for (var i=0, count=Caracal.ContactForm.list.length; i<count; i++)
+		Caracal.ContactForm.list[i].events.connect('submit-success', function(data) {
+			dataLayer.push({'event': 'leadSent'});
+			return true;
+		});
 };
 
 
