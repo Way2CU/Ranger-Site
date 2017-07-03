@@ -208,7 +208,7 @@ section.showacse div.steak {
 	box-sizing: border-box;
 	padding-right: 50%;
 	padding-left: 2em;
-	padding-top: 1.5em;
+	padding-top: 0.5em;
 	padding-bottom: 1.5em;
 	background-color: fade(@color_wine, 70%);
 	position: relative;
@@ -231,8 +231,13 @@ section.showacse div.steak {
 	}
 }
 
-section.showacse div.ranger li,
-section.showacse div.steak li {
+section.showacse div.steak ul,
+section.showacse div.ranger ul {
+	margin: 0;
+}
+
+section.showacse div.ranger ul li,
+section.showacse div.steak ul li {
 	list-style: none;
 	display: block;
 	width: 100%;
@@ -269,7 +274,7 @@ section.showacse div.ranger {
 		background-color: fade(@color_olive, 70%);
 		padding-right: 0;
 		padding-left: 50%;
-		padding-top: 4em;
+		padding-top: 2em;
 		padding-bottom: 4em;
 		box-shadow : 0px 0px 10px rgba(0, 0, 0, 0.9);
 

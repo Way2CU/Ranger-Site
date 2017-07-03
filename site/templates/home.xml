@@ -106,29 +106,33 @@
 							cms:eval="src"
 							/>
 					</div>
-				<cms:module
-					name="articles"
-					action="show_list"
-					group="steak_features"
-					template="stock/features_generic.xml"
-					>
-					<param name="title" value=""/>
-					<param name="sprite" value="site_sprite.svg"/>
-				</cms:module>
+					<ul>
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="steak_features"
+							template="stock/features_generic.xml"
+							>
+							<param name="title" value=""/>
+							<param name="sprite" value="site_sprite.svg"/>
+						</cms:module>
+					</ul>
 				</div>
 
 				<!-- Ranger Features -->
 				<div class="ranger">
 				<!-- Feature article list -->
-				<cms:module
-					name="articles"
-					action="show_list"
-					group="ranger_features"
-					template="stock/features_generic.xml"
-					>
-					<param name="title" value=""/>
-					<param name="sprite" value="site_sprite.svg"/>
-				</cms:module>
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="ranger_features"
+						template="stock/features_generic.xml"
+						>
+						<param name="title" value=""/>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
 
 				<!-- Image  -->
 					<div class="ranger_image">
